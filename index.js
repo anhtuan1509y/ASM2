@@ -16,6 +16,7 @@ app.use(expressSession({
 }))
 
 app.get('/',(req,res)=>{
+    console.log("running")
     sess = req.session
     if(sess.user){
         res.redirect('./list')
